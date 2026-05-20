@@ -32,22 +32,22 @@
         </div>
 
         <nav class="flex-1 mt-6 px-4 space-y-1">
-            <a href="#" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 text-emerald-400 bg-zinc-800/50">
+            <a href="/admin" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 transition-colors {{ request()->is('admin') ? 'text-emerald-400 bg-zinc-800/50' : '' }}">
                 🏠 <span class="font-medium">Dashboard</span>
             </a>
-            <a href="/user" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 transition-colors">
+            <a href="/user" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 transition-colors {{ request()->is('user') ? 'text-emerald-400 bg-zinc-800/50' : '' }}">
                 👤 <span class="font-medium">Users</span>
             </a>
-            <a href="/position" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 transition-colors">
+            <a href="/position" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 transition-colors {{ request()->is('position') ? 'text-emerald-400 bg-zinc-800/50' : '' }}">
                 💼 <span class="font-medium">Positions</span>
             </a>
-            <a href="/employee" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 transition-colors">
+            <a href="/employee" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 transition-colors {{ request()->is('employee') ? 'text-emerald-400 bg-zinc-800/50' : '' }}">
                 👥 <span class="font-medium">Employees</span>
             </a>
-            <a href="/payroll" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 transition-colors">
+            <a href="/payroll" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 transition-colors {{ request()->is('payroll') ? 'text-emerald-400 bg-zinc-800/50' : '' }}">
                 💰 <span class="font-medium">Payroll</span>
             </a>
-            <a href="/admin/attendance" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 transition-colors">
+            <a href="/admin/attendance" class="flex items-center gap-3 py-3 px-4 rounded-2xl hover:bg-zinc-800 transition-colors {{ request()->is('admin/attendance') ? 'text-emerald-400 bg-zinc-800/50' : '' }}">
                 📅 <span class="font-medium">Attendance</span>
             </a>
         </nav>
